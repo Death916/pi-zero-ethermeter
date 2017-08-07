@@ -12,9 +12,11 @@ class SendMail():
 			self.server = smtplib.SMTP('smtp.gmail.com', 587)
 			self.server.ehlo()
 			self.server.starttls()
-			self.server.login('tavn1992@gmail.com', 'ikoevgbbrrjeowtr')
+			# enter login info 
+			self.server.login('email login', 'email pass')
 			print('login success')
-			self.server.sendmail('tavn1992@gmail.com', 'tavn1992@gmail.com', msg)
+			# fill in to and from fields
+			self.server.sendmail('from', 'to', msg)
 			print('update sent')
 
 
