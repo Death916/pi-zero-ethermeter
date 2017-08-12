@@ -18,6 +18,7 @@ class SendMail():
 			# fill in to and from fields
 			self.server.sendmail('from', 'to', msg)
 			print('update sent')
+			self.server.quit()
 
 
 
